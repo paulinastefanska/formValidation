@@ -1,4 +1,6 @@
 .App {
+  max-width: 450px;
+  margin: 0 auto;
   text-align: center;
 }
 
@@ -19,4 +21,15 @@ button {
   margin: 20px;
   padding: 5px 10px;
   cursor: pointer;
+}
+
+span {
+  display: block;
+  font-size: 12px;
+  background-color: rgba(255, 148, 8, 0.514);
+  opacity: 0.9;
+  padding: 2px 4px;
+  border-radius: 5px;
+  margin: 4px auto;
+  width: 90%;
 }

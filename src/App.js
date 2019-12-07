@@ -6,7 +6,22 @@ class App extends Component {
     username: "",
     email: "",
     password: "",
-    accept: false
+    accept: false,
+
+    errors: {
+      username: true,
+      email: true,
+      password: true,
+      accept: true
+    }
+  };
+
+  messages = {
+    username_incorrect:
+      "Name must be longer than 10 characters and cannot contain spaces",
+    email_incorrect: "No @ sign in e-mail",
+    password_incorrect: "Password must contain 8 characters",
+    accept_incorrect: "Consent must be approved"
   };
 
   handleChange = e => {
@@ -43,6 +58,9 @@ class App extends Component {
               value={this.state.username}
               onChange={this.handleChange}
             />
+            {this.state.errors.username && (
+              <span> {this.messages.username_incorrect}</span>
+            )}
           </label>
 
           <label htmlFor="email">
@@ -54,6 +72,9 @@ class App extends Component {
               value={this.state.email}
               onChange={this.handleChange}
             />
+            {this.state.errors.email && (
+              <span> {this.messages.email_incorrect}</span>
+            )}
           </label>
 
           <label htmlFor="password">
@@ -65,6 +86,9 @@ class App extends Component {
               value={this.state.password}
               onChange={this.handleChange}
             />
+            {this.state.errors.password && (
+              <span> {this.messages.password_incorrect}</span>
+            )}
           </label>
 
           <label htmlFor="accept">
@@ -77,6 +101,9 @@ class App extends Component {
             />{" "}
             I agree to the processing of data
           </label>
+          {this.state.errors.accept && (
+            <span> {this.messages.accept_incorrect}</span>
+          )}
           <button>Sign up</button>
         </form>
       </div>
