@@ -7,6 +7,7 @@ class App extends Component {
     email: "",
     password: "",
     accept: false,
+    message: "",
 
     errors: {
       username: false,
@@ -50,6 +51,7 @@ class App extends Component {
         email: "",
         password: "",
         accept: false,
+        message: "Form has been sent!",
 
         errors: {
           username: false,
@@ -108,6 +110,18 @@ class App extends Component {
       correct
     };
   };
+
+  componentDidUpdate() {
+    if (this.state.message !== "") {
+      setTimeout(
+        () =>
+          this.setState({
+            message: ""
+          }),
+        2000
+      );
+    }
+  }
 
   render() {
     return (
@@ -168,8 +182,10 @@ class App extends Component {
           {this.state.errors.accept && (
             <span> {this.messages.accept_incorrect}</span>
           )}
+
           <button>Sign up</button>
         </form>
+        {this.state.message && <h3>{this.state.message}</h3>}
       </div>
     );
   }
