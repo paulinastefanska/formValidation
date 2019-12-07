@@ -1,3 +1,7 @@
+# Form Validation App - See [DEMO](https://paulinastefanska.github.io/formValidation)
+
+### Create-React-App exercise
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
