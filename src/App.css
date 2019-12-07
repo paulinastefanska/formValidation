@@ -25,11 +25,11 @@ button {
 
 span {
   display: block;
-  font-size: 12px;
+  font-size: 11px;
   background-color: rgba(255, 148, 8, 0.514);
   opacity: 0.9;
   padding: 2px 4px;
   border-radius: 5px;
   margin: 4px auto;
-  width: 90%;
+  width: 85%;
 }
